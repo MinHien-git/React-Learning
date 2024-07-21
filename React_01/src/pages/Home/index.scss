@@ -1,0 +1,21 @@
+.section-1,
+.section-2,
+.section-3 {
+  height: 50vh;
+  display: grid;
+  place-content: center;
+  font-weight: bold;
+  color: white
+}
+
+.section-1 {
+  background-color: orange;
+}
+
+.section-2 {
+  background-color: blueviolet;
+}
+
+.section-3 {
+  background-color: greenyellow;
+}

@@ -1,0 +1,24 @@
+@use "../../styles/_global.scss" as g;
+
+.home-layout {
+  display: grid;
+  gap: 1rem;
+  @include g.tablet {
+    grid-template-areas:
+      "n n n"
+      "s1 s1 s2"
+      "s3 s3 s3";
+    .navbar {
+      grid-area: n;
+    }
+    & > .section-1 {
+      grid-area: s1;
+    }
+    & > .section-2 {
+      grid-area: s2;
+    }
+    & > .section-3 {
+      grid-area: s3;
+    }
+  }
+}

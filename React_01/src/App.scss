@@ -1,0 +1,80 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-height: 100vh;
+  padding: 0;
+  margin: 0;
+}
+// xs sm md lg xl
+:root {
+  --flex-gap: 0.5rem;
+  --layout: grid;
+
+  // ------------------------ Padding ------------------------
+  --padding-xs: 0.25 rem;
+  --padding-sm: 0.5 rem;
+  --padding-md: 0.75 rem;
+  --padding-xs: 1 rem;
+  --padding-lg: 1.25 rem;
+
+  // ---------------------------- Font size ----------------------
+  --fs-xs: 0.625rem;
+  --fs-sm: 0.625rem;
+  --fs-md: 0.75rem;
+  --fs-lg: 1.5rem;
+  --fs-xl: 3rem;
+
+  --color-background: 255, 0, 0;
+}
+
+.padding-1 {
+  padding: 0.25rem;
+}
+
+.padding-2 {
+  padding: 0.5rem;
+}
+
+.padding-3 {
+  padding: 0.625rem;
+}
+//typography
+.padding-4 {
+  padding: 0.75rem;
+}
+
+.padding-5 {
+  padding: 1rem;
+}
+
+.flex {
+  display: flex;
+  gap: var(--flex-gap, 1rem);
+}
+
+.grid {
+  display: grid;
+  gap: var(--flex-gap, 1rem);
+  background-color: rgba(var(--color-background), 0.3);
+}
+
+.border {
+  border: 1px solid black;
+}
+
+.modify-1 {
+  --flex-gap: 2rem;
+}
+.layout {
+  display: var(--layout, grid);
+}
+@media only screen and (min-width: 600px) {
+  .layout {
+    --layout: flex;
+  }
+}
